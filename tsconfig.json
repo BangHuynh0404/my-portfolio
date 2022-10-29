@@ -19,7 +19,7 @@
     "types": ["@emotion/react/types/css-prop"]
   },
   
-  "include": ["src", "plopfile.cjs"],
+  "include": ["src", "plopfile.js"],
   "exclude": ["node_modules"], // Fix Storybook build Errors
   "references": [{ "path": "./tsconfig.node.json" }]
 }
