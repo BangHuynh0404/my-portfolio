@@ -38,12 +38,11 @@ const CardPatient: React.FC<CardPatientProps> = (
             alt="Norway"
           />
         </Card.Section>
-
+        <Badge color={`${patientStatus(status).colorStatus}`} variant="light">
+          {patientStatus(status).messageStatus}
+        </Badge>
         <Group position="apart" mt="md" mb="xs">
           <Text weight={500}>{fullName || "Chưa nhập tên"}</Text>
-          <Badge color={`${patientStatus(status).colorStatus}`} variant="light">
-            {patientStatus(status).messageStatus}
-          </Badge>
         </Group>
         <Text size="sm" color="dimmed">
           Tuổi tác: {`${age}`} tuổi

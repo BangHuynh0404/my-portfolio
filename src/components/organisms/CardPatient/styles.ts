@@ -18,6 +18,11 @@ const StyledCardPatient = styled.div`${(props: StyledCardPatientProps) => {
       .${root}_infoButton {
          text-decoration: none !important
       }
+      .mantine-Badge-root {
+         position: absolute;
+         top: 10px;
+         right: 10px;
+      }
    `;
 }}
 `;

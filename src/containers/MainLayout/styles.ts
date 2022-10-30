@@ -10,12 +10,14 @@ const StyledMainLayout = styled.div`${(props: StyledMainLayoutProps) => {
    return css`
       main {
          width: 100%;
-         height: calc(99vh - ${toRem(60)}) ;
+         height: calc(100vh - ${toRem(60)}) ;
          display: flex;
          overflow-y: hidden;
+         
       }
       .${root}_content{
-         max-height: calc(99vh - ${toRem(60)});        
+         max-height: calc(100vh - ${toRem(60)});    
+             
       }
       .mantine-NavLink-label {
          color: #014268;

@@ -1,6 +1,6 @@
 export const toRem = (px: number) => {
-   return `${px / 16}rem`
-}
+   return `${px / 16}rem`;
+};
 
 import { css } from "styled-components";
 
@@ -45,8 +45,8 @@ export const mediaQuery = (breakpoints: ScreenSizesTypes) => {
    }
 };
 
-
-export const textLineLimit = (lineAlow: string) => css`
+export const textLineLimit = (lineAlow: string) =>
+   css`
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: (${lineAlow});
@@ -54,24 +54,26 @@ export const textLineLimit = (lineAlow: string) => css`
     text-overflow: ellipsis;
 `;
 
-
-export const transform = (value: string) => css`
+export const transform = (value: string) =>
+   css`
     -o-transform: ${value};
     -moz-transform: ${value};
     -ms-transform: ${value};
     -webkit-transform: ${value};
     transform: ${value};
 `;
+
 export const scrollBars = (
-   size: 12,
+   size: number,
    thumbColor: string,
    trackColor: string,
-   borderRadiusThumb: 5,
-   borderThumb: 2
-) => css`// For Internet Explorer
+   borderRadiusThumb: number,
+   borderThumb: number,
+) =>
+   css`// For Internet Explorer
 
-scrollbar-face-color: $thumb-color;
-scrollbar-track-color: $track-color;
+   scrollbar-face-color: ${thumbColor};
+   scrollbar-track-color: ${trackColor};
 
 // For Google Chrome
 &::-webkit-scrollbar {
@@ -89,6 +91,3 @@ scrollbar-track-color: $track-color;
 &::-webkit-scrollbar-track {
     background: ${trackColor};
 }`;
-
-
-

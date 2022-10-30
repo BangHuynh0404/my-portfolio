@@ -13,7 +13,7 @@ const PatientListContainer: React.FC<PatientListContainerProps> = () => {
         Danh sách các bệnh nhân
       </h2>
       <Divider my="sm" />
-      <Grid>
+      <Grid gutter="lg">
         {mockPatientsData.map((item) => (
           <Grid.Col span={3} key={`${item.id}`}>
             <CardPatient
