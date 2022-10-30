@@ -1,18 +1,22 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
 
-import CustomNavbar from '.';
+import CustomNavbar from ".";
 
 export default {
-  title: 'Components/organisms/CustomNavbar',
+  title: "Components/organisms/CustomNavbar",
   component: CustomNavbar,
   parameters: {
-    layout: 'centered',
+    // layout: "centered",
   },
-  argTypes: {}
+  argTypes: {},
 } as ComponentMeta<typeof CustomNavbar>;
 
-const Template: ComponentStory<typeof CustomNavbar> = (args) => <CustomNavbar {...args} />;
+const Template: ComponentStory<typeof CustomNavbar> = (args) => (
+  <div style={{ width: "100%" }}>
+    <CustomNavbar {...args} />
+  </div>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};

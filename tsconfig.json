@@ -1,3 +1,31 @@
+// {
+//   "compilerOptions": {
+//     "target": "ESNext",
+//     "useDefineForClassFields": true,
+//     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "esModuleInterop": false,
+//     "allowSyntheticDefaultImports": true,
+//     "strict": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "module": "ESNext",
+//     "moduleResolution": "Node",
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "jsx": "react-jsx",
+//     "baseUrl": "src",
+//     "paths": {
+//       "~": ["./src"],
+//     }
+//   },
+//   "include": ["src", "plopfile.js"],
+//   "exclude": ["node_modules"], // Fix Storybook build Errors
+//   "references": [{ "path": "./tsconfig.node.json" }],
+  
+// }
+
 {
   "compilerOptions": {
     "target": "ESNext",
@@ -14,12 +42,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "src",
-    "types": ["@emotion/react/types/css-prop"]
+    "jsx": "react-jsx"
   },
-  
-  "include": ["src", "plopfile.js"],
+  "include": ["src"],
   "exclude": ["node_modules"], // Fix Storybook build Errors
   "references": [{ "path": "./tsconfig.node.json" }]
 }

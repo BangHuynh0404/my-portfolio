@@ -1,0 +1,25 @@
+import styled, { css } from "styled-components";
+import { CardPatientProps } from ".";
+
+interface StyledCardPatientProps {
+   // Custom Props
+};
+
+const StyledCardPatient = styled.div`${(props: StyledCardPatientProps) => {
+   let root = "o-cardPatient";
+   return css`
+      transition: all 0.3s ease-in-out;
+      
+      
+      :hover {
+         transform: scale(1.05);
+      }
+
+      .${root}_infoButton {
+         text-decoration: none !important
+      }
+   `;
+}}
+`;
+
+export default StyledCardPatient;
