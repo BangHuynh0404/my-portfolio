@@ -1,10 +1,8 @@
+import styled from "@emotion/styled"
+import { css } from "@emotion/react"
 
-import styled, { css } from "styled-components";
-import { CustomNavbarProps } from ".";
-import { toRem } from "../../../styles/function";
-
-interface StyledCustomNavbarProps extends CustomNavbarProps {
-   // Custom Props
+interface StyledCustomNavbarProps {
+   sidebarActive: boolean
 };
 
 const StyledCustomNavbar = styled.div`${(props: StyledCustomNavbarProps) => {
@@ -13,22 +11,31 @@ const StyledCustomNavbar = styled.div`${(props: StyledCustomNavbarProps) => {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      position: sticky;
+      top: 0;
       width: 100%;
-      height: ${toRem(60)};
-      
+      height: 65px;
+      /* Glass effect */
+      background: rgba(255, 255, 255, 0.53);
+      border-bottom: 1px whitesmoke solid;
+      backdrop-filter: blur(11.1px);
+      -webkit-backdrop-filter: blur(11.1px);
 
       .${root}_leftMenu {
          padding-right: 15px;
+         transform: rotateY(0deg);
+         transition: all 0.3s ease-in-out;
+         transform: ${props.sidebarActive && 'rotateY(180deg)'};
       }
 
       .${root}_rightMenu {
          display: flex;
          justify-content:flex-end;
          padding: 0 10px 0 0;
+
          .mantine-Menu-dropdown { 
             left: calc(100vw - 225px) !important;
-      }
+         }
       }
       
    `;

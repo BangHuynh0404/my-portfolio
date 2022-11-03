@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components";
+import styled from "@emotion/styled"
+import { css } from "@emotion/react"
 import { CardPatientProps } from ".";
 
 interface StyledCardPatientProps {
@@ -9,7 +10,6 @@ const StyledCardPatient = styled.div`${(props: StyledCardPatientProps) => {
    let root = "o-cardPatient";
    return css`
       transition: all 0.3s ease-in-out;
-      
       
       :hover {
          transform: scale(1.05);

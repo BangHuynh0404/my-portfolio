@@ -1,6 +1,6 @@
 import { createBrowserRouter, redirect } from "react-router-dom";
+import HomeContainer from "./containers/Home";
 import MainLayoutContainer from "./containers/MainLayout/index";
-import PatientListPage from "./pages/PatientList";
 
 const routes = createBrowserRouter([
   {
@@ -8,8 +8,8 @@ const routes = createBrowserRouter([
     element: <MainLayoutContainer />,
     children: [
       {
-        path: "patients",
-        element: <PatientListPage />,
+        path: "/",
+        element: <HomeContainer />,
       },
     ],
   },

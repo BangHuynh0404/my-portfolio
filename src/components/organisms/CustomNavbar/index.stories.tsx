@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { withRouter } from "storybook-addon-react-router-v6";
 import React from "react";
 
 import CustomNavbar from ".";
@@ -6,6 +7,7 @@ import CustomNavbar from ".";
 export default {
   title: "Components/organisms/CustomNavbar",
   component: CustomNavbar,
+  decorators: [withRouter],
   parameters: {
     // layout: "centered",
   },

@@ -1,6 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from "@emotion/styled"
+import { css } from "@emotion/react"
 import { CustomSidebarProps } from ".";
-import { toRem } from "../../../styles/function";
+import { toRem, textLineLimit } from "../../../styles/function";
 
 interface StyledCustomSidebarProps extends CustomSidebarProps {
    isOpen?: boolean;
@@ -8,21 +9,51 @@ interface StyledCustomSidebarProps extends CustomSidebarProps {
 
 const StyledCustomSidebar = styled.div`${(props: StyledCustomSidebarProps) => {
    let root = "o-customSidebar";
-   return css`
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-      width: ${toRem(250)};
-      transition: all 0.3s ease-in-out;
-      width: ${props?.isOpen && toRem(50)};
-      height: calc(98vh - ${toRem(60)});
+   return css`     
+      width: 100%;
+      height: 100vh;
       z-index: 2;
-      padding: 15px 5px 0 5px;
+      padding: 10px 10px;
+      border-right: 1px whitesmoke solid;
+
+      .${root}_logo {
+         margin: 30px auto;
+         transition: all 0.3s ease-in-out;
+         margin: ${props.isOpen && '30px 13px'};
+      }
 
       .mantine-NavLink-root{
-         margin-bottom: 5px;
+         margin-bottom: 8px;
+         border-radius: 10px;
+         height:  48px;
+         /* display: flex !important;
+         justify-content: center !important; */
+      }
+      
+      .mantine-NavLink-icon {
+         width: auto;
+         margin-right: 12px;
+      }
+
+      a:not([data-active]) {
+         color: rgba(0,0,2,0.6);
       }
       
       .mantine-NavLink-label {
+         transition: all 0.3s ease-in-out;
          font-size:  16px !important;
+         font-weight: 600;
+         display: block;
+         display: ${props.isOpen && 'none'};
+         overflow: hidden;
+      }
+      .${root}_divider {
+         margin: 20px 0;
+         font-weight: bold;
+         cursor: context-menu;
+         padding-left: 0;
+         padding-left: ${props.isOpen || '15px'};
+         color: rgba(0,0,2,0.8);
       }
    `;
 }}

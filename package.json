@@ -13,6 +13,7 @@
   "main": "./src/main.tsx",
   "dependencies": {
     "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@mantine/core": "^5.6.3",
     "@mantine/dates": "^5.6.3",
     "@mantine/dropzone": "^5.6.3",
@@ -20,6 +21,7 @@
     "@mantine/hooks": "^5.6.3",
     "@mantine/modals": "^5.6.3",
     "@mantine/notifications": "^5.6.3",
+    "@tabler/icons": "^1.109.0",
     "ag-grid-react": "^28.2.0",
     "dayjs": "^1.11.6",
     "localforage": "^1.10.0",
@@ -28,7 +30,6 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2",
     "sort-by": "^1.2.0",
-    "styled-components": "^5.3.6",
     "vite-tsconfig-paths": "^3.5.2"
   },
   "devDependencies": {

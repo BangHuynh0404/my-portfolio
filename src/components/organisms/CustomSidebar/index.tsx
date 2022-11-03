@@ -1,8 +1,10 @@
-import { NavLink, Text } from "@mantine/core";
+import { Divider, Image, NavLink, Text } from "@mantine/core";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import StylesCustomSidebar from "./styles";
-import { Icon } from "@iconify/react";
+import logo from "../../../assets/images/logo.svg";
+import logoMini from "../../../assets/images/logo-mini.svg";
+import { IconSmartHome, IconUsers } from "@tabler/icons";
 export interface CustomSidebarProps {
   isOpen?: boolean;
 }
@@ -10,45 +12,50 @@ export interface CustomSidebarProps {
 const CustomSidebar: React.FC<CustomSidebarProps> = ({ isOpen }) => {
   const location = useLocation();
   return (
-    <StylesCustomSidebar className="o-customSidebar">
+    <StylesCustomSidebar className="o-customSidebar" isOpen={isOpen}>
+      <Image
+        className="o-customSidebar_logo"
+        src={isOpen ? logoMini : logo}
+        height={40}
+        width={150}
+        fit="contain"
+      />
+
+      <div className="o-customSidebar_divider">
+        {isOpen ? <Divider sx={{ color: "green" }} /> : <span>GENERAL</span>}
+      </div>
+
       <NavLink
-        label="Danh sách bệnh nhân"
+        label="Home"
         component={Link}
-        to={"/patients"}
-        active={location.pathname === "/patients"}
-        icon={
-          <Icon
-            icon="fluent-mdl2:health-solid"
-            width="40"
-            height="40"
-            color="#014268"
-          />
-        }
+        to={"/"}
+        active={location.pathname === "/"}
+        color="green"
+        icon={<IconSmartHome size={24} />}
       />
       <NavLink
-        label="Danh sách các bác sĩ"
+        label="Employees List"
         component={Link}
         to={"/doctors"}
         active={location.pathname === "/doctors"}
-        icon={
-          <Icon
-            icon="fluent-emoji-high-contrast:man-health-worker"
-            width="40"
-            height="40"
-            color="#014268"
-          />
-        }
+        icon={<IconUsers size={24} />}
+        noWrap
       />
       <NavLink
-        childrenOffset={28}
-        label={"Danh sách bệnh nhân"}
+        label="Employees List"
+        component={Link}
+        to={"/doctors"}
+        active={location.pathname === "/doctors"}
+        icon={<IconUsers size={24} />}
+        noWrap
       >
         <NavLink
-          label="First child link"
+          label="Employees List"
           component={Link}
-          to={"/patients"}
-          active={location.pathname === "/patients"}
-          icon={<Icon icon="healthicons:health-worker" />}
+          to={"/doctors"}
+          active={location.pathname === "/doctors"}
+          icon={<IconUsers size={24} />}
+          noWrap
         />
       </NavLink>
     </StylesCustomSidebar>

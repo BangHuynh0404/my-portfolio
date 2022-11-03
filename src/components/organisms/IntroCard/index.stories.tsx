@@ -1,21 +1,22 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
+
 import React from "react";
 
-import CustomSidebar from ".";
+import IntroCard from ".";
 
 export default {
-  title: "Components/organisms/CustomSidebar",
-  component: CustomSidebar,
+  title: "Components/organisms/IntroCard",
+  component: IntroCard,
   decorators: [withRouter],
   parameters: {
     layout: "centered",
   },
   argTypes: {},
-} as ComponentMeta<typeof CustomSidebar>;
+} as ComponentMeta<typeof IntroCard>;
 
-const Template: ComponentStory<typeof CustomSidebar> = (args) => (
-  <CustomSidebar {...args} />
+const Template: ComponentStory<typeof IntroCard> = (args) => (
+  <IntroCard {...args} />
 );
 
 export const Primary = Template.bind({});

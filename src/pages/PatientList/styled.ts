@@ -1,5 +1,5 @@
-/* eslint-disable prettier/prettier */
-import styled from 'styled-components';
+import styled from "@emotion/styled"
+import { css } from "@emotion/react"
 import { scrollBars } from '../../styles/function';
 
 const StylesPatientList = styled.div`

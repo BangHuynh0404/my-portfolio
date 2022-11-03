@@ -2,7 +2,8 @@ export const toRem = (px: number) => {
    return `${px / 16}rem`;
 };
 
-import { css } from "styled-components";
+import styled from "@emotion/styled"
+import { css } from "@emotion/react"
 
 // VARIBLES
 
@@ -45,7 +46,7 @@ export const mediaQuery = (breakpoints: ScreenSizesTypes) => {
    }
 };
 
-export const textLineLimit = (lineAlow: string) =>
+export const textLineLimit = (lineAlow: number) =>
    css`
     -webkit-box-orient: vertical;
     display: -webkit-box;
@@ -68,7 +69,7 @@ export const scrollBars = (
    thumbColor: string,
    trackColor: string,
    borderRadiusThumb: number,
-   borderThumb: number,
+   borderThumb?: number,
 ) =>
    css`// For Internet Explorer
 
@@ -85,9 +86,10 @@ export const scrollBars = (
 &::-webkit-scrollbar-thumb {
     background: ${thumbColor};
     // border: rem($border-thumb) solid $track-color;
-    border-radius: ${toRem(borderRadiusThumb)};
+    border-radius: ${toRem(borderRadiusThumb)}px;
 }
 
 &::-webkit-scrollbar-track {
     background: ${trackColor};
 }`;
+
