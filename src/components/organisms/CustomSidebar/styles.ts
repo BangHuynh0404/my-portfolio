@@ -53,7 +53,12 @@ const StyledCustomSidebar = styled.div`${(props: StyledCustomSidebarProps) => {
          cursor: context-menu;
          padding-left: 0;
          padding-left: ${props.isOpen || '15px'};
-         color: rgba(0,0,2,0.8);
+         
+
+            span {
+               font-size: 12px;
+               color: rgba(0,0,2,0.7);
+            }
       }
    `;
 }}

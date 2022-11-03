@@ -1,6 +1,7 @@
 import { createBrowserRouter, redirect } from "react-router-dom";
-import HomeContainer from "./containers/Home";
+
 import MainLayoutContainer from "./containers/MainLayout/index";
+import HomePage from "./pages/Home";
 
 const routes = createBrowserRouter([
   {
@@ -9,7 +10,7 @@ const routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomeContainer />,
+        element: <HomePage />,
       },
     ],
   },

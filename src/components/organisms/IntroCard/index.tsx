@@ -9,14 +9,18 @@ const IntroCard: React.FC<IntroCardProps> = () => {
   //Some Logic
   return (
     <StylesIntroCard className="o-introCard">
-      <div className="o-introCard_title">
-        <span>Welcome!</span>
-      </div>
       <div className="o-introCard_content">
-        <span>
-          My name is Bang, I'm a Developer
-        </span>
+        <div className="o-introCard_title">
+          <span>
+            Welcome! <br /> My name is Bang,<br /> I'm a Developer
+          </span>
+        </div>
+        <div className="o-introCard_desc">
+          <span>
+          </span>
+        </div>
       </div>
+
       <div className="o-introCard_image">
         <Image src={introImage} />
       </div>

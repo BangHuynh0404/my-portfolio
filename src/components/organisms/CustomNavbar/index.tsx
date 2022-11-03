@@ -48,24 +48,6 @@ const CustomNavbar: React.FC<CustomNavbarProps> = (
           offset={10}
           position="bottom-start"
         >
-          <Menu.Target>
-            <Avatar src="https://source.unsplash.com/random" />
-          </Menu.Target>
-
-          <Menu.Dropdown>
-            <Menu.Label>Ứng dụng</Menu.Label>
-            <Menu.Item>Cài đặt</Menu.Item>
-            <Menu.Item>Lịch làm việc</Menu.Item>
-            <Menu.Divider />
-
-            <Menu.Label>Tài khỏan</Menu.Label>
-            <Menu.Item>
-              Cài đặt tài khoản
-            </Menu.Item>,
-            <Menu.Item color="red">
-              Đăng xuất
-            </Menu.Item>
-          </Menu.Dropdown>
         </Menu>
       </div>
     </StylesCustomNavbar>

@@ -1,16 +1,20 @@
 import React from "react";
-
+import IntroCard from "../../components/organisms/IntroCard";
+import { Grid } from "@mantine/core";
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface HomeContainerProps {}
 
 const HomeContainer: React.FC<HomeContainerProps> = () => {
   console.log("Im in Home, Delete me!");
   return (
-    <>
-      <h1>home</h1>
-      <div style={{ height: "100vh", width: 200, backgroundColor: "red" }}>
-      </div>
-    </>
+    <Grid grow>
+      <Grid.Col span={7}>
+        <IntroCard />
+      </Grid.Col>
+      <Grid.Col span={3}>
+        hihi
+      </Grid.Col>
+    </Grid>
   );
 };
 
