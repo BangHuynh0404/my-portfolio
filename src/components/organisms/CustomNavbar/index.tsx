@@ -41,14 +41,9 @@ const CustomNavbar: React.FC<CustomNavbarProps> = (
       }
 
       <div className="o-customNavbar_rightMenu">
-        <Menu
-          shadow="md"
-          trigger="hover"
-          width={200}
-          offset={10}
-          position="bottom-start"
-        >
-        </Menu>
+        <div className="moving-text">
+          Site still under Construction
+        </div>
       </div>
     </StylesCustomNavbar>
   );

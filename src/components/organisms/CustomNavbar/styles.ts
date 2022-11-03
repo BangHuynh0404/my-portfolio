@@ -37,6 +37,16 @@ const StyledCustomNavbar = styled.div`${(props: StyledCustomNavbarProps) => {
             left: calc(100vw - 225px) !important;
          }
       }
+      @keyframes marquee{
+            0%{transform: translateX(100%);}
+            100%{transform: translateX(-100%);}
+        }
+      @media (prefers-reduced-motion: no-preference) {
+            .moving-text{
+                animation: marquee 10s linear infinite;
+            }
+        }
+     
       
    `;
 }}

@@ -15,9 +15,11 @@ const HomeContainer: React.FC<HomeContainerProps> = () => {
       <Grid.Col span={3}>
         <IntroSlider />
       </Grid.Col>
-      <Grid.Col span={6}>
+      {
+        /* <Grid.Col span={6}>
         <IntroCard />
-      </Grid.Col>
+      </Grid.Col> */
+      }
     </Grid>
   );
 };
