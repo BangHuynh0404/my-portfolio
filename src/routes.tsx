@@ -26,7 +26,14 @@ const routes = createBrowserRouter([
       },
       {
         path: "/staff-man",
-        element: <h1>staff-man</h1>,
+        element: (
+          <iframe
+            style={{ height: "90vh" }}
+            src="https://staffmanage.netlify.app"
+            title="W3Schools Free Online Web Tutorials"
+          >
+          </iframe>
+        ),
       },
     ],
   },

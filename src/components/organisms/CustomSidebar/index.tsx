@@ -67,6 +67,7 @@ const CustomSidebar: React.FC<CustomSidebarProps> = ({ isOpen }) => {
       <NavLink
         label="Learning"
         component={Link}
+        description="Current Learning"
         to={"/learning"}
         active={location.pathname === "/learning"}
         icon={<IconSchool size={24} />}
@@ -78,7 +79,7 @@ const CustomSidebar: React.FC<CustomSidebarProps> = ({ isOpen }) => {
       </div>
       <NavLink
         label="Staffs Management"
-        description="Just a small practice"
+        description="Small App with CRUD ops"
         component={Link}
         to={"/staff-man"}
         active={location.pathname === "/staff-man"}

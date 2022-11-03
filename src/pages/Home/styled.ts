@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 const StylesHome = styled.div`
-   padding: 30px;
+   padding: 70px 100px;
    overflow: hidden;
 `;
 
