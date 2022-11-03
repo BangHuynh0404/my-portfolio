@@ -12,11 +12,12 @@ const IntroCard: React.FC<IntroCardProps> = () => {
       <div className="o-introCard_content">
         <div className="o-introCard_title">
           <span>
-            Welcome! <br /> My name is Bang,<br /> I'm a Developer
+            Welcome! <br /> My name is Bang,<br /> I'm a Front-end Developer.
           </span>
         </div>
         <div className="o-introCard_desc">
           <span>
+            Let's me introduce myself ...
           </span>
         </div>
       </div>

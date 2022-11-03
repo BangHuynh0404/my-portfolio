@@ -12,6 +12,22 @@ const routes = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
+      {
+        path: "/personal-info",
+        element: <h1>personal-info</h1>,
+      },
+      {
+        path: "/tech",
+        element: <h1>Tech</h1>,
+      },
+      {
+        path: "/learning",
+        element: <h1>learning</h1>,
+      },
+      {
+        path: "/staff-man",
+        element: <h1>staff-man</h1>,
+      },
     ],
   },
 ]);

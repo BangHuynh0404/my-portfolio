@@ -8,7 +8,7 @@ const HomeContainer: React.FC<HomeContainerProps> = () => {
   console.log("Im in Home, Delete me!");
   return (
     <Grid grow>
-      <Grid.Col span={7}>
+      <Grid.Col span={6}>
         <IntroCard />
       </Grid.Col>
       <Grid.Col span={3}>

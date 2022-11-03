@@ -4,7 +4,13 @@ import { Link, useLocation } from "react-router-dom";
 import StylesCustomSidebar from "./styles";
 import logo from "../../../assets/images/logo.svg";
 import logoMini from "../../../assets/images/logo-mini.svg";
-import { IconSmartHome, IconUsers } from "@tabler/icons";
+import {
+  IconNotebook,
+  IconSchool,
+  IconSettings,
+  IconSmartHome,
+  IconUsers,
+} from "@tabler/icons";
 export interface CustomSidebarProps {
   isOpen?: boolean;
 }
@@ -34,30 +40,52 @@ const CustomSidebar: React.FC<CustomSidebarProps> = ({ isOpen }) => {
         icon={<IconSmartHome size={24} />}
       />
       <NavLink
-        label="Employees List"
+        label="Persional Info"
+        description="Experiences, Education"
         component={Link}
-        to={"/doctors"}
-        active={location.pathname === "/doctors"}
-        icon={<IconUsers size={24} />}
+        to={"/personal-info"}
+        active={location.pathname === "/personal-info"}
+        icon={<IconNotebook size={24} />}
+        color="green"
         noWrap
       />
+
+      <div className="o-customSidebar_divider">
+        {isOpen ? <Divider sx={{ color: "green" }} /> : <span>TECHNICAL</span>}
+      </div>
+
       <NavLink
-        label="Employees List"
+        label="Tech Stacks"
         component={Link}
-        to={"/doctors"}
-        active={location.pathname === "/doctors"}
-        icon={<IconUsers size={24} />}
+        to={"/tech"}
+        active={location.pathname === "/tech"}
+        icon={<IconSettings size={24} />}
         noWrap
-      >
-        <NavLink
-          label="Employees List"
-          component={Link}
-          to={"/doctors"}
-          active={location.pathname === "/doctors"}
-          icon={<IconUsers size={24} />}
-          noWrap
-        />
-      </NavLink>
+        color="green"
+      />
+
+      <NavLink
+        label="Learning"
+        component={Link}
+        to={"/learning"}
+        active={location.pathname === "/learning"}
+        icon={<IconSchool size={24} />}
+        color="green"
+        noWrap
+      />
+      <div className="o-customSidebar_divider">
+        {isOpen ? <Divider sx={{ color: "green" }} /> : <span>PROJECTS</span>}
+      </div>
+      <NavLink
+        label="Staffs Management"
+        description="Just a small practice"
+        component={Link}
+        to={"/staff-man"}
+        active={location.pathname === "/staff-man"}
+        icon={<IconUsers size={24} />}
+        color="green"
+        noWrap
+      />
     </StylesCustomSidebar>
   );
 };

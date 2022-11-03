@@ -13,7 +13,7 @@ const StyledCustomSidebar = styled.div`${(props: StyledCustomSidebarProps) => {
       width: 100%;
       height: 100vh;
       z-index: 2;
-      padding: 10px 10px;
+      padding: 10px ${props.isOpen ? '10px' : '20px'};
       border-right: 1px whitesmoke solid;
 
       .${root}_logo {
@@ -39,7 +39,7 @@ const StyledCustomSidebar = styled.div`${(props: StyledCustomSidebarProps) => {
          color: rgba(0,0,2,0.6);
       }
       
-      .mantine-NavLink-label {
+      .mantine-NavLink-label, .mantine-NavLink-description {
          transition: all 0.3s ease-in-out;
          font-size:  16px !important;
          font-weight: 600;
@@ -47,14 +47,17 @@ const StyledCustomSidebar = styled.div`${(props: StyledCustomSidebarProps) => {
          display: ${props.isOpen && 'none'};
          overflow: hidden;
       }
+      .mantine-NavLink-description{
+         font-size:  12px !important;
+         font-weight: 600;
+      }
       .${root}_divider {
-         margin: 20px 0;
+         padding: 30px 0;
          font-weight: bold;
          cursor: context-menu;
          padding-left: 0;
          padding-left: ${props.isOpen || '15px'};
          
-
             span {
                font-size: 12px;
                color: rgba(0,0,2,0.7);

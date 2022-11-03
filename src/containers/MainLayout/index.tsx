@@ -8,7 +8,7 @@ import StyledMainLayout from "./styles";
 interface MainLayoutContainerProps {}
 
 const MainLayoutContainer: React.FC<MainLayoutContainerProps> = () => {
-  const [sideActive, sideActiveToggle] = useToggle([true, false]);
+  const [sideActive, sideActiveToggle] = useToggle([false, true]);
   return (
     <StyledMainLayout sideActive={sideActive}>
       <div className="c-MainLayout_sidebar">
