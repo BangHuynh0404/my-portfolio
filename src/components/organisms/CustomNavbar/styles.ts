@@ -38,12 +38,12 @@ const StyledCustomNavbar = styled.div`${(props: StyledCustomNavbarProps) => {
          }
       }
       @keyframes marquee{
-            0%{transform: translateX(100%);}
-            100%{transform: translateX(-100%);}
+            0%{transform: translateX(-700%);}
+            100%{transform: translateX(500%);}
         }
       @media (prefers-reduced-motion: no-preference) {
             .moving-text{
-                animation: marquee 10s linear infinite;
+                animation: marquee 25s linear infinite;
             }
         }
      
