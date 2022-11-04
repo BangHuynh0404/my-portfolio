@@ -12,7 +12,7 @@ const HomeContainer: React.FC<HomeContainerProps> = () => {
       <Grid.Col xl={6} lg={10}>
         <IntroCard />
       </Grid.Col>
-      <Grid.Col xl={3} lg={10}>
+      <Grid.Col xl={4} lg={10}>
         <IntroSlider />
       </Grid.Col>
       {

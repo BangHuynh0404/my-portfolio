@@ -25,7 +25,7 @@ const StyledCustomSidebar = styled.div`${(props: StyledCustomSidebarProps) => {
       .mantine-NavLink-root{
          margin-bottom: 8px;
          border-radius: 10px;
-         height:  48px;
+         height:  52px;
          /* display: flex !important;
          justify-content: center !important; */
       }

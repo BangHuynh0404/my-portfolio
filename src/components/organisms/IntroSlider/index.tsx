@@ -1,7 +1,9 @@
 import React from "react";
 import { Carousel } from "@mantine/carousel";
+import { Image } from "@mantine/core";
 import StylesIntroSlider from "./styles";
-
+import quoteImg1 from "../../../assets/images/quote-1.png";
+import quoteImg2 from "../../../assets/images/quote -2.png";
 export interface IntroSliderProps {
   children?: React.ReactNode;
 }
@@ -13,8 +15,9 @@ const IntroSlider: React.FC<IntroSliderProps> = ({ children }) => {
       <Carousel
         sx={{ maxWidth: "100%", backgroundColor: "white", borderRadius: 16 }}
         mx="auto"
-        withIndicators
+        align="center"
         height={265}
+        withIndicators
         styles={{
           indicator: {
             width: 12,
@@ -27,10 +30,18 @@ const IntroSlider: React.FC<IntroSliderProps> = ({ children }) => {
           },
         }}
       >
-        <Carousel.Slide>1</Carousel.Slide>
-        <Carousel.Slide>2</Carousel.Slide>
-        <Carousel.Slide>3</Carousel.Slide>
-        {/* ...other slides */}
+        <Carousel.Slide>
+          <Image
+            src={quoteImg1}
+            fit={"cover"}
+          />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <Image
+            src={quoteImg2}
+            fit={"cover"}
+          />
+        </Carousel.Slide>
       </Carousel>
     </StylesIntroSlider>
   );

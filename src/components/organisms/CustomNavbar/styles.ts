@@ -26,6 +26,8 @@ const StyledCustomNavbar = styled.div`${(props: StyledCustomNavbarProps) => {
          transform: rotateY(0deg);
          transition: all 0.3s ease-in-out;
          transform: ${props.sidebarActive && 'rotateY(180deg)'};
+         background-color: white;
+         z-index: 3;
       }
 
       .${root}_rightMenu {

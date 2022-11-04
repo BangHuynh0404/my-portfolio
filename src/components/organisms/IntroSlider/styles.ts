@@ -10,6 +10,8 @@ const StyledIntroSlider = styled.div`${(props: StyledIntroSliderProps) => {
    let root = "o-introSlider";
    return css`   
       width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
    `;
 }}
 `;
