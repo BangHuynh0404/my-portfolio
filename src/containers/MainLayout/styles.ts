@@ -20,7 +20,7 @@ const StyledMainLayout = styled.div`${(props: StyledMainLayoutProps) => {
      }
      .${root}_main {
          width: calc(100vw - 265px);
-         transition: all 0.3s ease-in-out;
+         transition: width 0.3s ease-in-out;
          width: ${props.sideActive && "100vw"};    
          height: 100vh;
          ${scrollBars(4, 'green', 'whitesmoke', 50, 20)}

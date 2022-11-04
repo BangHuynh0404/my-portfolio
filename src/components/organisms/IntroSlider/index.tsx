@@ -11,7 +11,7 @@ const IntroSlider: React.FC<IntroSliderProps> = ({ children }) => {
   return (
     <StylesIntroSlider className="o-introSlider">
       <Carousel
-        sx={{ maxWidth: "100%", backgroundColor: "green", borderRadius: 16 }}
+        sx={{ maxWidth: "100%", backgroundColor: "white", borderRadius: 16 }}
         mx="auto"
         withIndicators
         height={265}

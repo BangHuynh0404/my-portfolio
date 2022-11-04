@@ -9,10 +9,10 @@ const HomeContainer: React.FC<HomeContainerProps> = () => {
   console.log("Im in Home, Delete me!");
   return (
     <Grid grow gutter={36}>
-      <Grid.Col span={6}>
+      <Grid.Col xl={6} lg={10}>
         <IntroCard />
       </Grid.Col>
-      <Grid.Col span={3}>
+      <Grid.Col xl={3} lg={10}>
         <IntroSlider />
       </Grid.Col>
       {

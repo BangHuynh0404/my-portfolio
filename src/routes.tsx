@@ -2,6 +2,8 @@ import { createBrowserRouter, redirect } from "react-router-dom";
 
 import MainLayoutContainer from "./containers/MainLayout/index";
 import HomePage from "./pages/Home";
+import MyGithubPage from "./pages/MyGithub";
+import StaffManagementPage from "./pages/StaffManagement";
 
 const routes = createBrowserRouter([
   {
@@ -26,14 +28,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "/staff-man",
-        element: (
-          <iframe
-            style={{ height: "90vh" }}
-            src="https://staffmanage.netlify.app"
-            title="W3Schools Free Online Web Tutorials"
-          >
-          </iframe>
-        ),
+        element: <StaffManagementPage />,
+      },
+      {
+        path: "/git",
+        element: <MyGithubPage />,
       },
     ],
   },

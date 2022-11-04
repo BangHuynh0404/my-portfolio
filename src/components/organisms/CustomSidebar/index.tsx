@@ -5,6 +5,7 @@ import StylesCustomSidebar from "./styles";
 import logo from "../../../assets/images/logo.svg";
 import logoMini from "../../../assets/images/logo-mini.svg";
 import {
+  IconGitBranch,
   IconNotebook,
   IconSchool,
   IconSettings,
@@ -40,7 +41,7 @@ const CustomSidebar: React.FC<CustomSidebarProps> = ({ isOpen }) => {
         icon={<IconSmartHome size={24} />}
       />
       <NavLink
-        label="Persional Info"
+        label="Personal Info"
         description="Experiences, Education"
         component={Link}
         to={"/personal-info"}
@@ -84,6 +85,19 @@ const CustomSidebar: React.FC<CustomSidebarProps> = ({ isOpen }) => {
         to={"/staff-man"}
         active={location.pathname === "/staff-man"}
         icon={<IconUsers size={24} />}
+        color="green"
+        noWrap
+      />
+      <div className="o-customSidebar_divider">
+        {isOpen ? <Divider sx={{ color: "green" }} /> : <span>GITHUB</span>}
+      </div>
+      <NavLink
+        label="Git Hub"
+        description="My GitHub"
+        component={Link}
+        to={"/git"}
+        active={location.pathname === "/git"}
+        icon={<IconGitBranch size={24} />}
         color="green"
         noWrap
       />

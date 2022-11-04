@@ -42,7 +42,8 @@ const CustomNavbar: React.FC<CustomNavbarProps> = (
 
       <div className="o-customNavbar_rightMenu">
         <div className="moving-text">
-          Site still under Construction
+          Site still under Construction, Good looking in Desktop Only. Happy
+          Coding!
         </div>
       </div>
     </StylesCustomNavbar>
