@@ -2,7 +2,7 @@ import React from "react";
 import IntroCard from "../../components/organisms/IntroCard";
 import { Grid } from "@mantine/core";
 import IntroSlider from "../../components/organisms/IntroSlider";
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+
 interface HomeContainerProps {}
 
 const HomeContainer: React.FC<HomeContainerProps> = () => {

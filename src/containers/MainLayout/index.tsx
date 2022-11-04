@@ -1,6 +1,7 @@
 import { useToggle } from "@mantine/hooks";
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
+import ChatBubble from "../../components/organisms/ChatBubble";
 import CustomNavbar from "../../components/organisms/CustomNavbar";
 import CustomSidebar from "../../components/organisms/CustomSidebar";
 import StyledMainLayout from "./styles";
@@ -22,8 +23,13 @@ const MainLayoutContainer: React.FC<MainLayoutContainerProps> = () => {
         />
         <div className="c-MainLayout_content">
           <Outlet />
+          <div className="moving-text">
+            Site still under Construction, Good looking in Desktop Only. Happy
+            Coding!
+          </div>
         </div>
       </div>
+      <ChatBubble />
     </StyledMainLayout>
   );
 };

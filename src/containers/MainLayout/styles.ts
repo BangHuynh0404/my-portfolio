@@ -38,6 +38,17 @@ const StyledMainLayout = styled.div`${(props: StyledMainLayoutProps) => {
          background-color: yellow;
      }
 
+     @keyframes marquee{
+            0%{transform: translateX(-200%);}
+            100%{transform: translateX(200%);}
+        }
+      @media (prefers-reduced-motion: no-preference) {
+            .moving-text{
+                animation: marquee 30s linear infinite;
+                position: absolute;
+                bottom:2px;
+            }
+        }
      
 `;
 }}

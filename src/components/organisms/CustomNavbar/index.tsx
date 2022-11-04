@@ -6,7 +6,7 @@ import { Avatar, Image, Menu, Text } from "@mantine/core";
 // import logo from "../../../assets/images/logo.svg";
 // import { Link } from "react-router-dom";
 import hamberger from "../../../assets/images/hamberger.svg";
-
+import { IconBrandFacebook } from "@tabler/icons";
 export interface CustomNavbarProps {
   children?: React.ReactNode;
   sidebarActive: boolean;
@@ -32,19 +32,9 @@ const CustomNavbar: React.FC<CustomNavbarProps> = (
           fit="contain"
         />
       </div>
-      {
-        /* <div className="o-customNavbar_leftMenu">
-        <Link to="/">
-          <Image src={logo} height={40} width={150} fit="contain" />
-        </Link>
-      </div> */
-      }
+      {/* <IconBrandFacebook size={24} color="green" /> */}
 
       <div className="o-customNavbar_rightMenu">
-        <div className="moving-text">
-          Site still under Construction, Good looking in Desktop Only. Happy
-          Coding!
-        </div>
       </div>
     </StylesCustomNavbar>
   );
