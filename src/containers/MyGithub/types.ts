@@ -1,1 +1,0 @@
-//MyGithub Type definitions
