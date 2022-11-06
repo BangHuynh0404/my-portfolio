@@ -9,7 +9,7 @@ const StylesMyGithub = styled.div`
          display: flex;
          flex-direction: column;
          justify-content: space-between;
-         height: 300px;
+         height: 400px;
       }
       a {
          text-decoration: none;

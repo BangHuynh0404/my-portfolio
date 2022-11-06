@@ -27,6 +27,10 @@ const MyGithubContainer: React.FC<MyGithubContainerProps> = () => {
           techName: "Mantine UI Library",
           color: "blue",
         },
+        {
+          techName: "TypeScript",
+          color: "blue",
+        },
       ],
     },
     {
@@ -50,7 +54,7 @@ const MyGithubContainer: React.FC<MyGithubContainerProps> = () => {
     <main>
       <Grid gutter={36}>
         {mockData.map((item) => (
-          <Grid.Col span={3}>
+          <Grid.Col xl={3} lg={6}>
             <Card shadow="sm" p="lg" radius="md" withBorder>
               <Card.Section>
               </Card.Section>
