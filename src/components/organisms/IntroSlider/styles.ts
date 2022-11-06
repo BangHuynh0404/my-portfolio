@@ -12,6 +12,7 @@ const StyledIntroSlider = styled.div`${(props: StyledIntroSliderProps) => {
       width: 100%;
       border-radius: 16px;
       overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
    `;
 }}
 `;

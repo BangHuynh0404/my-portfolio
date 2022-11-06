@@ -3,8 +3,6 @@ import React from "react";
 import StylesCustomNavbar from "./styles";
 import { Avatar, Image, Menu, Text } from "@mantine/core";
 
-// import logo from "../../../assets/images/logo.svg";
-// import { Link } from "react-router-dom";
 import hamberger from "../../../assets/images/hamberger.svg";
 import { IconBrandFacebook } from "@tabler/icons";
 export interface CustomNavbarProps {

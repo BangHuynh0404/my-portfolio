@@ -33,13 +33,13 @@ const IntroSlider: React.FC<IntroSliderProps> = ({ children }) => {
         <Carousel.Slide>
           <Image
             src={quoteImg1}
-            fit={"cover"}
+            fit={"contain"}
           />
         </Carousel.Slide>
         <Carousel.Slide>
           <Image
             src={quoteImg2}
-            fit={"cover"}
+            fit={"contain"}
           />
         </Carousel.Slide>
       </Carousel>

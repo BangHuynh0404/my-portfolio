@@ -23,10 +23,6 @@ const MainLayoutContainer: React.FC<MainLayoutContainerProps> = () => {
         />
         <div className="c-MainLayout_content">
           <Outlet />
-          <div className="moving-text">
-            Site still under Construction, Good looking in Desktop Only. Happy
-            Coding!
-          </div>
         </div>
       </div>
       <ChatBubble />

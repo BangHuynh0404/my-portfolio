@@ -14,7 +14,7 @@ const StyledIntroCard = styled.div`${(props: StyledIntroCardProps) => {
       background: rgb(217,247,247);
       border-radius: 16px;
       max-height: 300px;
-      
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
       .${root}_content {
          display: flex;
          flex-direction: column;

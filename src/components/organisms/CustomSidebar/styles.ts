@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 import { CustomSidebarProps } from ".";
-import { toRem, textLineLimit } from "../../../styles/function";
+import { toRem, textLineLimit, mediaQuery } from "../../../styles/function";
 
 interface StyledCustomSidebarProps extends CustomSidebarProps {
    isOpen?: boolean;
@@ -9,13 +9,16 @@ interface StyledCustomSidebarProps extends CustomSidebarProps {
 
 const StyledCustomSidebar = styled.div`${(props: StyledCustomSidebarProps) => {
    let root = "o-customSidebar";
-   return css`     
+   return css`
+
       width: 100%;
       height: 100vh;
       z-index: 2;
       padding: 10px ${props.isOpen ? '10px' : '20px'};
       border-right: 1px whitesmoke solid;
-
+      [${mediaQuery('mobileUp')}]:{
+         background-color: red;
+      }
       .${root}_logo {
          margin: 30px auto;
          transition: all 0.3s ease-in-out;
