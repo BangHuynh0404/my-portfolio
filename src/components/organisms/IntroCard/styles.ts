@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 import { IntroCardProps } from ".";
+import { mediaQuery } from "../../../styles/function";
 interface StyledIntroCardProps extends IntroCardProps {
    // Custom Props
 };
@@ -15,6 +16,12 @@ const StyledIntroCard = styled.div`${(props: StyledIntroCardProps) => {
       border-radius: 16px;
       max-height: 300px;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      ${mediaQuery('tabletUp', (css`
+         flex-direction: column;
+         min-height: 500px;
+         align-self: center
+      `))}
+
       .${root}_content {
          display: flex;
          flex-direction: column;
@@ -23,6 +30,10 @@ const StyledIntroCard = styled.div`${(props: StyledIntroCardProps) => {
          color: rgb(0, 82, 73);
          border-radius: 16px;
          padding: 44px 0 44px 40px;
+
+         ${mediaQuery('tabletUp', (css`
+            padding: 10px 0 10px 20px;
+      `))}
 
          .${root}_title {
             span {
@@ -37,10 +48,12 @@ const StyledIntroCard = styled.div`${(props: StyledIntroCardProps) => {
          }
       }
       .${root}_image {
-         
          display: flex;
          align-items: center;
-         padding: -10px;
+         padding-top: 30px;
+         ${mediaQuery('tabletUp', (css`
+            height: 160px;
+      `))}
       }
    `;
 }}

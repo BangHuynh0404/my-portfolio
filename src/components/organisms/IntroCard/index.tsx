@@ -1,7 +1,7 @@
 import React from "react";
-import { Image } from "@mantine/core";
 import StylesIntroCard from "./styles";
-import introImage from "../../../assets/images/intro-coding.svg";
+import introImage from "../../../assets/json/programming-computer.json";
+import Lottie from "react-lottie-player";
 export interface IntroCardProps {
 }
 
@@ -23,7 +23,11 @@ const IntroCard: React.FC<IntroCardProps> = () => {
       </div>
 
       <div className="o-introCard_image">
-        <Image src={introImage} />
+        <Lottie
+          loop
+          animationData={introImage}
+          play
+        />
       </div>
     </StylesIntroCard>
   );

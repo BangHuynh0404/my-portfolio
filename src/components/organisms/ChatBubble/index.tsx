@@ -1,15 +1,13 @@
 import { useToggle } from "@mantine/hooks";
-import React, { useState } from "react";
+import React from "react";
 import Lottie from "react-lottie-player";
 import chatIcon from "../../../assets/json/chat-bubble.json";
 import StylesChatBubble from "./styles";
 import { IconBrandFacebook, IconMailFast } from "@tabler/icons";
 import { Modal } from "@mantine/core";
-export interface ChatBubbleProps {
-  children?: React.ReactNode;
-}
+export interface ChatBubbleProps {}
 
-const ChatBubble: React.FC<ChatBubbleProps> = ({ children }) => {
+const ChatBubble: React.FC<ChatBubbleProps> = () => {
   const [active, setActive] = useToggle([false, true]);
   console.log(active);
 
@@ -37,8 +35,6 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ children }) => {
   );
 };
 
-ChatBubble.defaultProps = {
-  children: undefined,
-};
+ChatBubble.defaultProps = {};
 
 export default ChatBubble;
