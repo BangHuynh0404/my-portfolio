@@ -6,7 +6,8 @@ const StylesHome = styled.div`
    padding: 70px 100px;
    overflow: hidden;
    ${mediaQuery('mobileUp', (css`
-       padding: 60px 16px;
+       padding: 20px 16px;
+
    `))}
 `;
 

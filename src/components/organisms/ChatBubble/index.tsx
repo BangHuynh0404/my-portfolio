@@ -29,7 +29,9 @@ const ChatBubble: React.FC<ChatBubbleProps> = () => {
         }}
         closeOnClickOutside
       >
-        <IconBrandFacebook size={48} color="blue" />
+        <div className="glass-object"></div>
+        <div className="glass-object"></div>
+        <div className="glass-object"></div>
       </Modal>
     </StylesChatBubble>
   );

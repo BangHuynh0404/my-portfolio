@@ -16,10 +16,8 @@ const StyledCustomNavbar = styled.div`${(props: StyledCustomNavbarProps) => {
       width: 100%;
       height: 65px;
       /* Glass effect */
-      background: rgba(255, 255, 255, 0.53);
+      background: rgba(255, 255, 255, 1);
       border-bottom: 1px whitesmoke solid;
-      backdrop-filter: blur(11.1px);
-      -webkit-backdrop-filter: blur(11.1px);
       z-index: 999;
 
       .${root}_leftMenu {

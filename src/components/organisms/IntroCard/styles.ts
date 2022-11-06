@@ -9,7 +9,7 @@ interface StyledIntroCardProps extends IntroCardProps {
 const StyledIntroCard = styled.div`${(props: StyledIntroCardProps) => {
    let root = "o-introCard";
    return css`
-      overflow: hidden;
+      /* overflow: hidden; */
       display: flex;
       justify-content: space-between;
       background-image: linear-gradient( 109.6deg,  rgba(61,245,167,0.5) 11.2%, rgba(9,111,224,0.5) 91.1% );
@@ -21,6 +21,9 @@ const StyledIntroCard = styled.div`${(props: StyledIntroCardProps) => {
          min-height: 400px;
          align-self: center;
          justify-content: center;
+         background-image: none;
+         /* border: 0; */
+         box-shadow: none;
       `))};
 
       .${root}_content {

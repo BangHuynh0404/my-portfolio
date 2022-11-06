@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 import { InfoCardProps } from ".";
+import { mediaQuery } from "../../../styles/function";
 
 interface StyledInfoCardProps extends InfoCardProps {
    // Custom Props
@@ -14,6 +15,9 @@ const StyledInfoCard = styled.div`${(props: StyledInfoCardProps) => {
       width: 100%;
       border-radius: 16px;
       padding: 24px;
+      ${mediaQuery('tabletUp', (css`
+         background-image: none;
+      `))};
 
       .${root}_title{
          font-size: 32px;

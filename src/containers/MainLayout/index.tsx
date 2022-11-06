@@ -1,7 +1,7 @@
 import { useToggle } from "@mantine/hooks";
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import ChatBubble from "../../components/organisms/ChatBubble";
+// import ChatBubble from "../../components/organisms/ChatBubble";
 import CustomNavbar from "../../components/organisms/CustomNavbar";
 import CustomSidebar from "../../components/organisms/CustomSidebar";
 import StyledMainLayout from "./styles";
@@ -25,7 +25,7 @@ const MainLayoutContainer: React.FC<MainLayoutContainerProps> = () => {
           <Outlet />
         </div>
       </div>
-      <ChatBubble />
+      {/* <ChatBubble /> */}
     </StyledMainLayout>
   );
 };
