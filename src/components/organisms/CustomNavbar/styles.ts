@@ -20,13 +20,14 @@ const StyledCustomNavbar = styled.div`${(props: StyledCustomNavbarProps) => {
       border-bottom: 1px whitesmoke solid;
       backdrop-filter: blur(11.1px);
       -webkit-backdrop-filter: blur(11.1px);
+      z-index: 999;
 
       .${root}_leftMenu {
          padding-right: 15px;
          transform: rotateY(0deg);
          transition: all 0.3s ease-in-out;
          transform: ${props.sidebarActive && 'rotateY(180deg)'};
-         background-color: white;
+
          z-index: 3;
       }
 
