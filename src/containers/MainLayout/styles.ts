@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-import { scrollBars } from "../../styles/function";
+import { mediaQuery, scrollBars } from "../../styles/function";
 
 interface StyledMainLayoutProps {
     sideActive?: boolean;
@@ -17,39 +17,29 @@ const StyledMainLayout = styled.div`${(props: StyledMainLayoutProps) => {
          transition: all 0.3s ease-in-out;
          width: ${props.sideActive && '75px'};
          overflow-x: hidden;
+
+         ${mediaQuery('mobileUp', (css`
+            display: none ;
+        `))}
      }
      .${root}_main {
-         width: calc(100vw - 265px);
-         transition: width 0.3s ease-in-out;
-         width: ${props.sideActive && "100vw"};    
-         height: 100vh;
-         ${scrollBars(4, 'green', 'whitesmoke', 50, 20)}
-         overflow: auto;
+         
+        ${mediaQuery('mobileUp', (css`
+            width: 100% ;
+        `))}
 
-         .${root}_content {
+        width: calc(100vw - 265px);
+        transition: width 0.3s ease-in-out;
+        width: ${props.sideActive && "100vw"};    
+        height: 100vh;
+        overflow: auto;
+        ${scrollBars(4, 'green', 'whitesmoke', 50, 20)}
+
+        .${root}_content {
             display: flex;
             flex-direction: column;
         }
      }
-
-     .test {
-         height: 1000px;
-         width: 200px;
-         background-color: yellow;
-     }
-
-     @keyframes marquee{
-            0%{transform: translateX(-200%);}
-            100%{transform: translateX(200%);}
-        }
-      @media (prefers-reduced-motion: no-preference) {
-            .moving-text{
-                animation: marquee 30s linear infinite;
-                position: absolute;
-                bottom:2px;
-            }
-        }
-     
 `;
 }}
 `;

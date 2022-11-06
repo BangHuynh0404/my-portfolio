@@ -2,8 +2,8 @@ export const toRem = (px: number) => {
    return `${px / 16}rem`;
 };
 
-import styled from "@emotion/styled"
-import { css } from "@emotion/react"
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 // VARIBLES
 
@@ -30,16 +30,28 @@ type ScreenSizesTypes =
    | "tabletUp"
    | "desktopUp"
    | "wideDesktop";
-export const mediaQuery = (breakpoints: ScreenSizesTypes) => {
+export const mediaQuery = (breakpoints: ScreenSizesTypes, inner: {}) => {
    switch (breakpoints) {
       case "smallMobileUp":
-         return `@media (max-width: ${screenSizes.xs})`;
+         return css`
+         @media (max-width: ${screenSizes.xs}) {
+           ${inner};
+         };`;
       case "mobileUp":
-         return `@media (max-width: ${screenSizes.sm})`;
+         return css`
+         @media (max-width: ${screenSizes.sm}) {
+           ${inner};
+         };`;
       case "tabletUp":
-         return `@media (max-width: ${screenSizes.md})`;
+         return css`
+         @media (max-width: ${screenSizes.md}) {
+           ${inner};
+         };`;
       case "wideDesktop":
-         return `@media (max-width: ${screenSizes.lg})`;
+         return css`
+         @media (max-width: ${screenSizes.lg}) {
+           ${inner};
+         };`;
 
       default:
          return "";
@@ -92,4 +104,3 @@ export const scrollBars = (
 &::-webkit-scrollbar-track {
     background: ${trackColor};
 }`;
-
