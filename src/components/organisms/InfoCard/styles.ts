@@ -10,14 +10,13 @@ interface StyledInfoCardProps extends InfoCardProps {
 const StyledInfoCard = styled.div`${(props: StyledInfoCardProps) => {
    let root = "o-infoCard";
    return css`
-      background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 50.1% );
+      display: flex;
+      
       min-height: 200px;
       width: 100%;
       border-radius: 16px;
       padding: 24px;
-      ${mediaQuery('tabletUp', (css`
-         background-image: none;
-      `))};
+      box-shadow: rgb(90 114 123 / 11%) 0px 7px 30px 0px;
 
       .${root}_title{
          font-size: 32px;

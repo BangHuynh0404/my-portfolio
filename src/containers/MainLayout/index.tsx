@@ -1,5 +1,6 @@
 import { useToggle } from "@mantine/hooks";
-import React, { useState } from "react";
+import React from "react";
+import { Button, Drawer, Group } from "@mantine/core";
 import { Outlet } from "react-router-dom";
 // import ChatBubble from "../../components/organisms/ChatBubble";
 import CustomNavbar from "../../components/organisms/CustomNavbar";

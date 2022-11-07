@@ -1,9 +1,12 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-import { scrollBars } from "../../styles/function";
+import { mediaQuery, scrollBars } from "../../styles/function";
 
 const StylesStaffManagement = styled.div`
    padding: 50px;
+   ${mediaQuery('tabletUp', (css`
+      padding: 10px
+   `))}
 
    iframe {
       width: 100%;

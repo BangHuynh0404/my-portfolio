@@ -19,14 +19,16 @@ const StyledMainLayout = styled.div`${(props: StyledMainLayoutProps) => {
          overflow-x: hidden;
 
          ${mediaQuery('mobileUp', (css`
-            display: none ;
+            position: absolute;
+            margin-top: 65px;
+            left: -100%;
+            width: 100%;
+            left:${!props.sideActive && 0} ;
+            background-color: white;
+            z-index: 5;
         `))}
      }
      .${root}_main {
-         
-        ${mediaQuery('mobileUp', (css`
-            width: 100% ;
-        `))}
 
         width: calc(100vw - 265px);
         transition: width 0.3s ease-in-out;
@@ -34,6 +36,10 @@ const StyledMainLayout = styled.div`${(props: StyledMainLayoutProps) => {
         height: 100vh;
         overflow: auto;
         ${scrollBars(4, 'green', 'whitesmoke', 50, 20)}
+
+        ${mediaQuery('mobileUp', (css`
+            width: 100% ;
+        `))}
 
         .${root}_content {
             display: flex;

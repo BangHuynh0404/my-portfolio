@@ -15,7 +15,8 @@ const StyledIntroCard = styled.div`${(props: StyledIntroCardProps) => {
       background-image: linear-gradient( 109.6deg,  rgba(61,245,167,0.5) 11.2%, rgba(9,111,224,0.5) 91.1% );
       border-radius: 16px;
       max-height: 300px;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      box-shadow: rgb(90 114 123 / 11%) 0px 7px 30px 0px;
+
       ${mediaQuery('tabletUp', (css`
          flex-direction: column;
          min-height: 400px;
@@ -39,6 +40,7 @@ const StyledIntroCard = styled.div`${(props: StyledIntroCardProps) => {
             padding: 0 16px;
             flex: 30% 1 1;
             max-height: 250px;
+            
          `))}
 
          .${root}_title {
@@ -56,11 +58,16 @@ const StyledIntroCard = styled.div`${(props: StyledIntroCardProps) => {
       .${root}_image {
          display: flex;
          align-items: center;
+         justify-content: center;
          padding-top: 30px;
-
+         
          ${mediaQuery('tabletUp', (css`
-            height: 160px;
+            height: 150px;
             padding: 0;
+            
+            div > svg {
+               max-height: 200px;
+            }
          `))}
       }
    `;

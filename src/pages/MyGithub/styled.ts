@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import { mediaQuery } from "../../styles/function";
 
 const StylesMyGithub = styled.div`
    
@@ -14,6 +15,7 @@ const StylesMyGithub = styled.div`
       a {
          text-decoration: none;
       }
+      
    }
 
 `;
